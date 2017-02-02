@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>How To Buy</title>
+<link rel="stylesheet" type="text/css" href="project.css">
+</head>
+<body>
+<p>
+<script language="JavaScript">
+function hitungtotal()
+{
+var name = (document.fform.iname.value);
+var email = (document.fform.iemail.value);
+var contact = (document.fform.icontact.value);
+var address = (document.fform.iaddress.value);
+var delivery = (document.fform.idelivery.value);
+var payment = (document.fform.ipayment.value);
+
+var harga = 0.0;
+var mtr = 0.0;
+var sub = 0.0;
+var ongkir = 0.0;
+var total = 0.0;
+var diskon = 0.0;
+
+if (document.fform.iproduct.checked==true)
+{
+	alert("Dompet")
+	ket="Dompet";
+	harga=80000;
+}
+if (document.fform.iproductn.checked==true)
+{
+	alert("BinderA5")
+	ket="BinderA5";
+	harga=80000;
+}
+if (document.fform.iproductnn.checked==true)
+{
+	alert("BinderB5")
+	ket="BinderB5";
+	harga=85000;
+}
+if (document.fform.iproductnnn.checked==true)
+{
+	alert("HPO")
+	ket="HPO";
+	harga=90000;
+}
+
+//if (material=="Leather")
+//{
+//mtr =5000;
+//}
+//else if (material=="Sateen")
+//{
+//mtr =0;
+//}
+var material = "";
+if (fform.Leather.checked == true)
+{
+	material = "Leather";
+	mtr = 5000;
+}
+else
+{
+	material = "Sateen";
+	mtr = 0;
+}
+alert ("You choose : " +material)
+
+if (delivery=="JNEYES")
+{
+	ongkir =30000;
+}
+	else if (delivery=="JNEREG")
+{
+	ongkir =20000;
+}
+	else if (delivery=="JNEOKE")
+{
+	ongkir = 18000;
+}
+
+sub = harga+mtr;
+if (document.fform.imember.checked==true)
+{
+	diskon =0.10*sub;
+}
+else
+{
+	diskon=0.0;
+}
+alert("diskon : " +diskon)
+
+total = sub-diskon+ongkir;
+
+		document.write("<h1>Print Out</h1>")
+		document.write("<table width ='400' border ='1'>");
+		document.write("<tr><td>");
+		document.write(" Nama : "+name+"<br >");
+		document.write(" Email : "+email+ "<br >");
+		document.write(" Contact : "+contact+ "<br >");
+		document.write(" Product : "+ket+ "<br >");
+		document.write(" Material : "+material+ "<br >" );
+	 	document.write(" Address : "+address+"<br>");
+		document.write(" Delivery : "+delivery+"<br>");
+		document.write(" Payment : "+payment+"<br>");
+		document.write("</td></tr>");
+		
+		document.write("<br>");
+		document.write("<tr><td>");
+		document.write(" Harga : "+harga+"<br>");
+		document.write(" Material : "+mtr+"<br>");
+		document.write(" Ongkir : "+ongkir+"<br>");
+		document.write(" Diskon : "+diskon+"<br>");
+		document.write("</td></tr>");
+		document.write("<tr><td><h3> Total : "+total+"</h3></td></tr>");
+		document.write("</table>");
+}
+</script>
+</p>
+<div id="wrapper">
+	<h1>
+	</h1>
+
+<div id="header">
+<h1><a href="nyoba.html"><img src="img/hihi.png"></a></h1>
+</div>
+
+<div id="menu">
+<ul id="menu">
+<li class="active"><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="galeri.html">Galery</a></li>
+    <li><a href="nyoba.html">Order</a></li>
+</ul>
+</div>
+
+<div id="content">
+<form name="fform">
+<h1>Form Online Order</h1>
+<pre>
+Name     : <input type="text" name="iname" size="30"><br>
+E-mail   : <input type="text" name="iemail" size="30"><br>
+Contact  : <input type="text" name="icontact" size="30"><br>
+Product  : <input type="checkbox" id="iproduct" name="iproduct" value="on">Dompet <input type="checkbox" id="iproductn" name="iproductn" value="on">Binder A5 <input type="checkbox" id="iproductnn" name="iproductnn" value="on">Binder B5 <input type="checkbox" id="iproductnnn" name="iproductnnn" value="on">HPO
+            <br>
+Material : <input type="radio" value="Leather" name="Leather">Synthetic Leather <input type="radio" value="Sateen" name="Sateen">Sateen
+					<br>
+Address  : <br><br><textarea name="iaddress" rows="4" cols="30"></textarea><br>
+Delivery Method : <select name="idelivery">
+					<option value="choose">Choose...</option>
+					<option value="JNEOKE">JNE OKE</option>
+					<option value="JNEREG">JNE REG</option>
+					<option value="JNEYES">JNE YES</option>
+					</select>
+					<br>
+Payment Method : <select name="ipayment">
+					<option value="choose">Choose...</option>
+					<option value="BNI">BNI</option>
+					<option value="BCA">BCA</option>
+					<option value="Mandiri">Mandiri</option>
+					<option value="BRI">BRI</option>
+					</select>
+					<br>
+Member : <input type="checkbox" name="imember">Ya<br>
+<input type="button" value="Done" onClick="hitungtotal()"><input type="reset" value="Reset">
+</pre>
+</form>
+</div>
+
+<div id="footer">
+	<p>Copyright &copy;2014.
+		by <a href="http://www.zulfatulafifah.blogspot.com/" title="zulfatulafifah.com">Zulfatul Afifah</a></p>
+</div>
+
+</div>
+</body>
+</html>

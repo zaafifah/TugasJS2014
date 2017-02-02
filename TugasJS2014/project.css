@@ -1,0 +1,73 @@
+body {
+	font: 100.1% 'lucida sans';
+	background:#ffffff;
+	background-image:url(img/fifi.jpg);
+}
+#wrapper {
+	width:860px;
+	margin:auto;
+	background-color:#D5EEF0;
+}
+#header {
+	width: 860px;
+	height: 150px;
+	background-color:#ffffff;
+	background-image:url(img/header.jpg);
+}
+#header h1 {
+	padding: 1;
+	margin: 1;
+	text-align:right;
+}
+#menu{ 
+	float:left; 
+	list-style:none;
+	background-color:#CCCCCC;
+}
+#menu li{
+	display: inline;
+}
+#menu li a{ 
+	padding:10px 75.5px;
+	border-right: 1px dashed #aeb59c;
+	text-decoration: none;
+	color:black;
+	font-weight:bold;
+}
+#menu li:last-child a{
+border-right:none
+}
+#menu a:hover, #menu a:active, #menu a:focus 
+#menu a.selected, #menu a.selected:hover, #menu a.selected:focus, #menu a.selected:active{
+color:#B3FFFF;
+}
+#content {
+	margin: 20px 50px;
+	width: 700px;
+	float: left;
+	display: inline;
+}
+#footer {
+	clear:both;
+	padding:10px;
+	text-align:center;
+	font-size:1em;
+	width: 840px;
+	height: 55px;
+	background-color:#58BCF1;
+	background-image:url(img/footer.jpg);
+}
+#footer p {
+	color:#000000;
+	font-weight:bold;
+	margin: 10px;
+	padding-top: 10px;
+}
+#footer a {
+	padding: 0;
+	color:#0000FF;
+	text-decoration:none;
+}
+#footer a:hover, #footer a:focus, #footer a:active {
+	color:#333333;
+}
